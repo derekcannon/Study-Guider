@@ -1,12 +1,9 @@
 package studyGuider;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JList;
 import java.awt.GridBagLayout;
 import javax.swing.JTextArea;
 import java.awt.GridBagConstraints;
@@ -15,6 +12,7 @@ import java.awt.Insets;
 import java.awt.Font;
 import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class QuestionController extends JFrame {
 
 	private JPanel contentPane;
@@ -122,7 +120,7 @@ public class QuestionController extends JFrame {
 		btnNewButton_1.setFont(new Font("Georgia", Font.PLAIN, 14));
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnNewButton_1.weightx = 0.5;
+		gbc_btnNewButton_1.weightx = 1.0;
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 0, 5);
 		gbc_btnNewButton_1.gridx = 0;
 		gbc_btnNewButton_1.gridy = 6;
@@ -131,7 +129,7 @@ public class QuestionController extends JFrame {
 		JButton btnIncorrect = new JButton("Incorrect");
 		btnIncorrect.setFont(new Font("Georgia", Font.PLAIN, 14));
 		GridBagConstraints gbc_btnIncorrect = new GridBagConstraints();
-		gbc_btnIncorrect.weightx = 0.5;
+		gbc_btnIncorrect.weightx = 1.0;
 		gbc_btnIncorrect.insets = new Insets(0, 0, 0, 5);
 		gbc_btnIncorrect.fill = GridBagConstraints.BOTH;
 		gbc_btnIncorrect.gridx = 1;
@@ -142,7 +140,7 @@ public class QuestionController extends JFrame {
 		btnNewButton.setFont(new Font("Georgia", Font.PLAIN, 14));
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
 		gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnNewButton.weightx = 0.5;
+		gbc_btnNewButton.weightx = 1.0;
 		gbc_btnNewButton.gridx = 2;
 		gbc_btnNewButton.gridy = 6;
 		contentPane.add(btnNewButton, gbc_btnNewButton);
