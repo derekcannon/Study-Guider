@@ -10,12 +10,17 @@ import java.awt.GridBagConstraints;
 import javax.swing.JButton;
 import java.awt.Insets;
 import java.awt.Font;
+import java.util.ArrayList;
+
 import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
-public class QuestionView extends JFrame {
+public class QuestionView extends JFrame implements QuestionViewInterface {
 
+	private ArrayList<JButton> choices = new ArrayList<JButton>();
 	private JPanel contentPane;
+	private JTextArea txtQuestion;
+	private JLabel lblDetails;
 
 	/**
 	 * Launch the application.
@@ -50,7 +55,7 @@ public class QuestionView extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
-		JTextArea txtQuestion = new JTextArea();
+		txtQuestion = new JTextArea();
 		txtQuestion.setFont(new Font("Georgia", Font.PLAIN, 18));
 		txtQuestion.setEditable(false);
 		txtQuestion.setText("No questions available.");
@@ -107,7 +112,7 @@ public class QuestionView extends JFrame {
 		gbc_btnChoice3.gridy = 4;
 		contentPane.add(btnChoice3, gbc_btnChoice3);
 		
-		JLabel lblDetails = new JLabel("0/0");
+		lblDetails = new JLabel("0/0");
 		lblDetails.setFont(new Font("Georgia", Font.PLAIN, 16));
 		GridBagConstraints gbc_lblDetails = new GridBagConstraints();
 		gbc_lblDetails.gridwidth = 3;
@@ -146,4 +151,44 @@ public class QuestionView extends JFrame {
 		contentPane.add(btnNewButton, gbc_btnNewButton);
 	}
 
+	@Override
+	public String showFileChooser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void nextQuestion(String question, ArrayList<String> choices,
+			String results) {
+		this.txtQuestion.setText(question);
+		this.lblDetails.setText(results);
+		
+		for(int i=0; i <= 3; i++)
+		{
+			this.choices.get(i).setText("");
+//			this.choices.get(i).setEnabled(false);
+			this.choices.get(i).setVisible(false);
+		}
+		
+		for(int i=0; i < choices.size(); i++)
+		{
+			this.choices.get(i).setText("<html>" + choices.get(i) + "</html>");
+//			this.choices.get(i).setEnabled(true);
+			this.choices.get(i).setVisible(true);
+		}
+		
+		this.txtQuestion.requestFocusInWindow();
+		this.txtQuestion.setCaretPosition(0);
+	}
+
+	@Override
+	public void setHint(ArrayList<String> choices, int answer, int hint) {
+		for(int i=0; i < choices.size(); i++)
+		{
+			if(!(i==answer || i== hint))
+			{
+				this.choices.get(i).setVisible(false);
+			}
+		}
+	}
 }
