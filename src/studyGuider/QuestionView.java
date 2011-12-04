@@ -24,7 +24,7 @@ public class QuestionView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					QuestionView frame = new QuestionView();
+					QuestionView frame = new QuestionView(null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class QuestionView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public QuestionView() {
+	public QuestionView(QuestionController controller) {
 		setTitle("Study Guider");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
