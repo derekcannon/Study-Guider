@@ -30,7 +30,7 @@ import javax.swing.JOptionPane;
 public class QuestionController {
 	
 	private ArrayList<QuestionAndAnswer> list;
-	private QuestionView view;
+	private QuestionViewInterface view;
 	private String questionFile;
 	private int currentQuestion = -1;
 	private int correctAnswers = 0;
@@ -39,7 +39,9 @@ public class QuestionController {
 	
 	public QuestionController()
 	{	
-		view = new QuestionView(this);
+		//view = new QuestionView(this);
+		view = new OldQuestionView(this); // TODO: Replace OldQuestionView with QuestionView soon
+		
 		questionFile = view.showFileChooser(); // Rest of code waits on file to be chosen
 
 		// Create ArrayList<ArrayList<String>> of questions, and shuffle them.
