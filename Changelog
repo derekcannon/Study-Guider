@@ -1,0 +1,43 @@
+/*
+ *  ======= Version 3.0 =======
+ * 
+ * 	New Features:
+ *  		* Hints
+ *  		* A simple update system to check for/download the latest version of Study Guider
+ *  
+ *  Coming Soon:
+ *  		* Add Flash-card-like system for questions without answers
+ * 
+ *  Improvements:
+ * 			* File selection window filters out everything but .txt files
+ * 			* Added "About" menu to see application information and check for updates 
+ * 
+ *  Bug Fixes:
+ * 			* Some minor GUI tweaks:
+ * 				* Excess buttons of choices with fewer than four questions now hide themselves.		
+ * 
+ * ======= Version 2.1 =======
+ * 
+ * Bug fixes:
+ * 		* Fixed bug where, if there were lines in the .TXT file that weren't questions or choices, the parser wouldn't parse correctly.
+ * 			
+ * ======= Version 2.0 =======
+ * 
+ * 	New Features:
+ * 		* Choice randomization
+ * 		* Lots of code restructuring for easier future improvements
+ * 
+ * 	Coming soon: 
+ * 		* Hints
+ * 		* "Review Missed Questions" option
+ * 		* Auto-updates?
+ * 
+ * 	Bug Fixes:
+ * 		* Questions with less than 4 responses are now correctly displayed
+ * 		* No longer crashes at last question
+ * 		* Some minor GUI tweaks:
+ * 				* Button focus clears after each new question
+ * 				* Question area shows tops of the question
+ * 				* Added 'total questions answered' to the bottom information panel
+ * 				* Changed the question numbering to reflect how many questions were answered (old way showed the original numbering of the question from the .TXT file)
+*/

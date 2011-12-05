@@ -67,9 +67,6 @@ public class UpdateChecker {
 										   // set the latest version to a high number, so the updater won't update.
 			
 		}
-		
-		
-		//updateJARPath = lines.get(1); // Set the JAR URL, according to the text file
 
 	}
 	
