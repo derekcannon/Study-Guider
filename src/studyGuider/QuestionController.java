@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
  *  		* Nothing yet.
  * 
  *  Improvements:
- * 			* Nothing yet.
+ * 			* Study Guider is now free and open source. Find it on GitHub at
  * 
  *  Bug Fixes:
  * 			* Some minor GUI tweaks:
